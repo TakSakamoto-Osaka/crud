@@ -1,0 +1,13 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Tak.Sakamoto
+	email = sakamototak.job@gmail.com
+# Please adapt and uncomment the following lines:
+#	name = 坂本隆幸
+#	email = sakamototakayuki@sakamototakayukinoMacBook-Pro.local
+[alias]
+	tree = log --graph --pretty=format:'%x09%C(auto) %h %Cgreen %ad %Creset%x09%C(cyan)%an%Creset %x09%C(auto)%s %d' --date=format-local:'%Y/%m/%d %H:%M:%S'
+[core]
+	quotepath = false
+[credential]
+	helper = "!f() { /root/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node /tmp/vscode-remote-containers-4b705bec-2812-4b51-9f70-26fef15cc488.js git-credential-helper $*; }; f"
