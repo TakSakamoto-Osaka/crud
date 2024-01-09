@@ -8,8 +8,7 @@ class TopView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)    #親クラスのメソッドを実行
-        context['h2'] = "SAMURAI"          #新しいデータを追加
-        context['h3'] = [1,2,3]          #新しいデータを追加
+        context['name'] = "侍太郎"          #新しいデータを追加
 
         return context
 

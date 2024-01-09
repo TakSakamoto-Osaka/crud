@@ -1,14 +1,11 @@
 {% extends "base.html" %}
+{% load honor %}
  
  {% block title %}トップ画面{% endblock %}
  {% block content %}
  <h1>Hello World!</h1>
  
- <h2>{{h2}}</h2>
-
- {% for val in h3 %}
- <h3>{{val}}</h3>
- {% endfor %}
+ <h2>{{name|honor}}</h2>
 
 
  {% endblock %}

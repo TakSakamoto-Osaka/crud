@@ -10,4 +10,4 @@
 [core]
 	quotepath = false
 [credential]
-	helper = "!f() { /root/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node /tmp/vscode-remote-containers-ef09b4b6-88c1-4f69-adde-bca6a7c5940b.js git-credential-helper $*; }; f"
+	helper = "!f() { /root/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node /tmp/vscode-remote-containers-ae45ab9f-0103-4384-8b46-ef791a591074.js git-credential-helper $*; }; f"
