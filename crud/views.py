@@ -9,13 +9,11 @@ from django.contrib.auth.forms import AuthenticationForm
 class TopView(TemplateView):
     template_name = "top.html"
 
-    '''
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)    #親クラスのメソッドを実行
         context['name'] = "侍太郎"          #新しいデータを追加
 
         return context
-    '''
 
 
 class ProductListView(LoginRequiredMixin, ListView):
