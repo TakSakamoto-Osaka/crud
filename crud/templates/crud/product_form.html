@@ -1,21 +1,22 @@
 {% extends "base.html" %}
 {% load bootstrap %}
 {% load widget_tweaks %}
- 
+
 {% block title %}新規作成{% endblock %}
 {% block content %}
 <h1>新規作成</h1>
 
-<form method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data" class="input-form">
     {% csrf_token %} 
+    {{ form.as_p }}
     <!---
         {{ form|bootstrap }}
         {{ form.name.label }}
+        
+        {{ form.name }}
+        {{ form.price.label }}
+        {{ form.price|add_class:'input-price' }}
     -->
-    
-    {{ form.name }}
-    {{ form.price.label }}
-    {{ form.price|add_class:'input-price' }}
 
     <br>
     <a href="{% url 'list' %}">戻る</a>

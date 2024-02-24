@@ -1,0 +1,15 @@
+.input-form label {
+    min-width: 30%;
+    position: relative;
+}
+
+.input-form label[for=id_price]:after {
+    font-family: 'FontAwesome';
+    content: "必須";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -12px;
+  }
+
+

@@ -28,15 +28,21 @@ class ProductListView(LoginRequiredMixin, ListView):
 
 class ProductCreateView(LoginRequiredMixin, CreateView):
     model = Product
-    fields = '__all__'
-    #fields = ['name', 'price']
+    # fields = '__all__'
+    fields = ['name', 'price']
    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # context['form'].fields['name'].widget.attrs["class"] = "input-name"
-        context['form'].fields['name'].widget.attrs = {"class":"input-name", "placeholder":"商品名", "value":"ビデオ"}
-       
-        # context['form_search'] = SearchForm(...)
+        
+        form = context['form']
+        
+        name = form.fields['name']
+        name.widget.attrs = {"placeholder":"商品名", "value":"ビデオ"}
+        name.label_suffix = ""
+        
+        price = form.fields['price']
+        price.widget.attrs = {"placeholder":"価格", "value":"10000"}
+        price.label_suffix = ""
         
         return context
 

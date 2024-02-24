@@ -8,8 +8,8 @@ class Category(models.Model):
         return self.name
     
 class Product(models.Model):
-    name = models.CharField(max_length=200)
-    price = models.PositiveIntegerField()
+    name = models.CharField(max_length=200, verbose_name="名前")
+    price = models.PositiveIntegerField(verbose_name="価格")
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     img = models.ImageField(blank=True, default='noImage.png')
     detail = models.TextField(blank=True, null=True)
